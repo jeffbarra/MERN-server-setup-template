@@ -16,6 +16,7 @@ const port = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors());
+app.use(express.json()); // any request that comes in, it's going to be able to accept JSON data in the body
 
 // Initialize API
 app.get("/test", (req, res) => {
